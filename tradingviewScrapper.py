@@ -1,4 +1,5 @@
 from urllib.request import urlopen
+from urllib.error import HTTPError
 from bs4 import BeautifulSoup
 import pandas as pd 
 from datetime import date
@@ -12,7 +13,7 @@ def tradingviewScrapper():
         'https://www.tradingview.com/markets/stocks-indonesia/market-movers-gainers'
     ]
 
-    root_path = r'A:\data\tradingview'
+    root_path = r'C:\Users\817932702\Downloads'
 
 
     for url in urls:
