@@ -13,7 +13,7 @@ def tradingviewScrapper():
         'https://www.tradingview.com/markets/stocks-indonesia/market-movers-gainers'
     ]
 
-    root_path = r'C:\Users\817932702\Downloads'
+    root_path = r'D:\proyek\scrapper\tradingview\data'
 
 
     for url in urls:
