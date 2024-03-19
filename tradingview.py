@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import pandas as pd 
 from datetime import date
 import os
+from urllib.error import HTTPError
+
 
 def tradingviewScrapper():
 
@@ -13,9 +15,7 @@ def tradingviewScrapper():
         'https://www.tradingview.com/markets/stocks-indonesia/market-movers-gainers'
     ]
 
-    root_path = r'D:\proyek\scrapper\tradingview\data'
-
-
+    root_path = r'D:\tradingview'
     for url in urls:
         try:
             # Pengambilan konten
@@ -47,8 +47,8 @@ def tradingviewScrapper():
             # Membuat DataFrame dari list data
             df = pd.DataFrame(data, columns=headers)
             filename = f'Data_{str(typeurl)}_{str(today)}.xlsx'
-            csv_path = os.path.join(root_path, filename)
-            df.to_excel(csv_path, index=False)
+            excel_path = os.path.join(root_path, filename)
+            df.to_excel(excel_path, index=False)
             print(f'Data {url} berhasil discrapping.')
             
         except HTTPError as e:
