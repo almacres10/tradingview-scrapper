@@ -17,7 +17,7 @@ def tradingviewScrapper():
 
     root_path = r'D:\proyek\scrapper\tradingview'
     root_path_2 = r'D:\proyek\tradingview'
-    root_path_4 = r'D:\proyek\tradingview'
+    root_path_3 = r'D:\proyek\tradingview'
     for url in urls:
         try:
             # Pengambilan konten
