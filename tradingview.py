@@ -18,6 +18,7 @@ def tradingviewScrapper():
     root_path = r'D:\proyek\scrapper\tradingview'
     root_path_2 = r'D:\proyek\tradingview'
     root_path_3 = r'D:\proyek\tradingview'
+    root_path_4 = r'D:\proyek\tradingview2'
     for url in urls:
         try:
             # Pengambilan konten
@@ -49,7 +50,7 @@ def tradingviewScrapper():
             # Membuat DataFrame dari list data
             df = pd.DataFrame(data, columns=headers)
             filename = f'Data_{str(typeurl)}_{str(today)}.xlsx'
-            excel_path = os.path.join(root_path, filename)
+            excel_path = os.path.join(root_path_4, filename)
             df.to_excel(excel_path, index=False)
             print(f'Data {url} berhasil discrapping.')
             
