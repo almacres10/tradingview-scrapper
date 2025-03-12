@@ -50,7 +50,7 @@ def tradingviewScrapper():
             # Membuat DataFrame dari list data
             df = pd.DataFrame(data, columns=headers)
             filename = f'Data_{str(typeurl)}_{str(today)}.xlsx'
-            excel_path = os.path.join(root_path_4, filename)
+            excel_path = os.path.join(root_path, filename)
             df.to_excel(excel_path, index=False)
             print(f'Data {url} berhasil discrapping.')
             
